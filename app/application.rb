@@ -17,9 +17,9 @@ class Application
     elsif req.path.match(/cart/)
       if @@cart = []
         resp.write "Your cart is empty"
-      else 
+      else
         resp.write @@cart
-      end 
+      end
     elsif req.path.match(/add/)
       search_term = req.params["item"]
       if @@items.include?(search_term)
